@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Projek | CrowdCare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        .detail-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 25px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #729fc0;
+            font-size: 13px;
+            margin-bottom: 35px;
+        }
+
+        .detail-heading {
+            margin-bottom: 35px;
+        }
+
+        .detail-heading h1 {
+            font: 800 38px "Plus Jakarta Sans";
+            color: #2d3b51;
+            margin: 15px 0;
+        }
+
+        .detail-heading h1 span {
+            color: #8b9fd0;
+        }
+
+        .detail-heading p {
+            max-width: 750px;
+            color: #8793a6;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .detail-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-bottom: 55px;
+        }
+
+        .detail-gallery img {
+            width: 100%;
+            height: 270px;
+            object-fit: contain;
+            background: #edf1f7;
+            border: 1px solid #e8edf5;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .detail-gallery img:first-child {
+            grid-column: span 2;
+            height: 420px;
+        }
+
+        .detail-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 35px;
+        }
+
+        .detail-box {
+            background: white;
+            padding: 25px;
+            border: 1px solid #e8edf5;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+
+        .detail-box h2 {
+            font: 700 18px "Plus Jakarta Sans";
+            color: #3b4960;
+            margin-top: 0;
+        }
+
+        .detail-box p,
+        .detail-box li {
+            font-size: 13px;
+            color: #8491a4;
+            line-height: 1.9;
+        }
+
+        .detail-box ul {
+            padding-left: 20px;
+        }
+
+        .detail-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .detail-tags span {
+            padding: 8px 13px;
+            background: #edf4fb;
+            color: #729fc0;
+            font-size: 11px;
+            border-radius: 20px;
+        }
+
+        .image-viewer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(30,40,60,.9);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .image-viewer.active {
+            display: flex;
+        }
+
+        .image-viewer img {
+            max-width: 95%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .viewer-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        @media(max-width: 700px) {
+            .detail-heading h1 {
+                font-size: 29px;
+            }
+
+            .detail-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-gallery img:first-child {
+                grid-column: auto;
+                height: 240px;
+            }
+
+            .detail-gallery img {
+                height: 220px;
+            }
+
+            .detail-content {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <a class="brand" href="index.html">
+        <span class="brand-mark">LH</span>
+        <span>
+            <b>Lando Hasta Hutabarat</b>
+            <small>Portfolio</small>
+        </span>
+    </a>
+
+    <a href="index.html" class="hire-btn">
+        Kembali ke Portofolio ↗
+    </a>
+</header>
+
+<main class="detail-container">
+
+    <a href="index.html#projects" class="back-link">
+        ← Kembali ke daftar projek
+    </a>
+
+    <div class="detail-heading">
+        <span class="section-kicker">PROJECT DETAIL / 01</span>
+
+        <h1>Crowd<span>Care</span> — Sistem Crowdfunding</h1>
+
+        <p>
+            CrowdCare merupakan sistem informasi crowdfunding
+            berbasis website yang dirancang untuk memudahkan
+            masyarakat dalam melakukan penggalangan dana,
+            memberikan donasi, serta memantau transparansi
+            penggunaan dan penyaluran dana.
+        </p>
+    </div>
+
+    <!-- GALERI FOTO -->
+    <div class="detail-gallery">
+
+        <img src="assets/CF_1.png"
+             alt="Tampilan utama CrowdCare">
+
+        <img src="assets/CF_2.png"
+             alt="Halaman kampanye CrowdCare">
+
+        <img src="assets/CF_3.png"
+             alt="Halaman donasi CrowdCare">
+
+    </div>
+
+    <!-- PENJELASAN PROJEK -->
+    <div class="detail-content">
+
+        <div>
+
+            <div class="detail-box">
+                <h2>Tentang Projek</h2>
+
+                <p>
+                    CrowdCare dikembangkan sebagai platform
+                    digital untuk membantu proses penggalangan
+                    dana secara online. Sistem ini memungkinkan
+                    pengguna melihat berbagai kampanye sosial,
+                    memilih kampanye yang ingin didukung,
+                    dan melakukan donasi secara digital.
+                </p>
+
+                <p>
+                    Selain itu, terdapat fitur transparansi
+                    yang memungkinkan penggalang dana
+                    menyampaikan informasi mengenai penggunaan
+                    dana yang telah diterima.
+                </p>
+            </div>
+
+            <div class="detail-box">
+                <h2>Tujuan Pengembangan</h2>
+
+                <ul>
+                    <li>Mempermudah masyarakat melakukan donasi secara online.</li>
+                    <li>Menyediakan informasi kampanye sosial secara terstruktur.</li>
+                    <li>Meningkatkan transparansi penggunaan dana.</li>
+                    <li>Membantu penggalang dana mengelola kampanye.</li>
+                </ul>
+            </div>
+
+            <div class="detail-box">
+                <h2>Fitur Utama</h2>
+
+                <ul>
+                    <li>Registrasi dan login pengguna.</li>
+                    <li>Pengelolaan kampanye penggalangan dana.</li>
+                    <li>Donasi online dan integrasi pembayaran Midtrans.</li>
+                    <li>Riwayat dan status transaksi donasi.</li>
+                    <li>Dashboard administrator.</li>
+                    <li>Laporan transparansi penggunaan dana.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="detail-box">
+                <h2>Informasi Projek</h2>
+
+                <p><b>Nama:</b> CrowdCare</p>
+                <p><b>Kategori:</b> Web Application</p>
+                <p><b>Peran:</b> Developer</p>
+                <p><b>Tahun:</b> 2026</p>
+                <p><b>Status:</b> Project Development</p>
+            </div>
+
+            <div class="detail-box">
+                <h2>Teknologi</h2>
+
+                <div class="detail-tags">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
+                    <span>Midtrans</span>
+                </div>
+            </div>
+
+            <div class="detail-box">
+                <h2>Hasil Pengembangan</h2>
+
+                <p>
+                    Menghasilkan aplikasi crowdfunding berbasis
+                    web dengan pengelolaan kampanye, transaksi
+                    donasi, serta fitur laporan transparansi
+                    penggunaan dana.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- PEMBESAR FOTO -->
+<div class="image-viewer" id="imageViewer">
+    <button class="viewer-close" onclick="closeImage()">&times;</button>
+    <img id="viewerImage" src="" alt="Preview gambar projek">
+</div>
+
+<script>
+    document.querySelectorAll(".detail-gallery img").forEach(img => {
+        img.addEventListener("click", function() {
+            document.getElementById("viewerImage").src = this.src;
+            document.getElementById("imageViewer").classList.add("active");
+        });
+    });
+
+    function closeImage() {
+        document.getElementById("imageViewer").classList.remove("active");
+    }
+
+    document.getElementById("imageViewer").addEventListener("click", function(e) {
+        if (e.target === this) closeImage();
+    });
+
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") closeImage();
+    });
+</script>
+
+</body>
+</html>
